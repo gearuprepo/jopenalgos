@@ -1,5 +1,0 @@
-- name: SonarCloud Scan
-  uses: SonarSource/sonarcloud-github-action@v1.3
-  with:
-    # Set the sonar.projectBaseDir analysis property
-    projectBaseDir: # optional, default is .

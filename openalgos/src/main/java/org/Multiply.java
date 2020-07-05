@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Multiply {
     
-    //Naive Implementation of multiplication O(n) = n^2
+    //Naive Implementation of multiplication O(n) = n^2 
     public static int naivemultiply(String a, String b){
         char[] a1 = a.toCharArray(); 
         char[] b1 = b.toCharArray();

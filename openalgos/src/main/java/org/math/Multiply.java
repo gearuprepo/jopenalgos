@@ -1,4 +1,4 @@
-package org;
+package org.math;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +38,12 @@ public class Multiply {
         }
         return retval;
     }
+
+    //TODO: Implmentation to the done.
+    public static int karatsubamultiply(String a,String b){
+        return 0;
+    }
+
 public static void main(String[] args) {
             
     System.out.println((naivemultiply("55", "34") == (55*34))?"Fine":"Notfine");

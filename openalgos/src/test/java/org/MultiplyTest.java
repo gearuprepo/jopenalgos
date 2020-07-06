@@ -1,7 +1,7 @@
 package org;
 
 import static org.junit.Assert.assertTrue;
-import org.Multiply;
+import org.math.Multiply;
 import org.junit.Test;
 
 /**

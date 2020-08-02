@@ -15,11 +15,9 @@ public class MaxSubArr {
     public int maxSubArray(int[] nums) {
         int approved = nums[0];
         int preapproved = nums[0];
-        int start = 0;
         for (int i=1;i<nums.length;i++){
              preapproved += nums[i];
              if(nums[i]>preapproved){
-                start = i;
                 approved = (nums[i]>approved)?nums[i]:approved;
                 preapproved = nums[i];
              }else{

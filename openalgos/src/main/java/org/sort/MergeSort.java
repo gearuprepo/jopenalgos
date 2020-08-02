@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
-//TODO
+//TODO - Needs cleaning and commenting
 public class MergeSort {
     public static void main(String[] args) {
         System.out.println("In Merge Sort");

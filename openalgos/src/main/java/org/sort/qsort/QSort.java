@@ -13,6 +13,7 @@ import java.util.List;
 public class QSort {
 
     public int qSortFirst(int[] input, int start, int end){
+        int retCount = end - start - 1;
         int pivot = input[start];
         int pivotmarker = start;
         for(int i = start+1;i<=end;i++){
@@ -27,10 +28,10 @@ public class QSort {
         input[pivotmarker] = pivot;
         input[start] = temp;
 
-        if((pivotmarker-1)> start) qSortFirst(input,start, pivotmarker-1);
-        if(end> (pivotmarker+1)) qSortFirst(input,pivotmarker+1,end);
+        if((pivotmarker-1)> start) retCount+=qSortFirst(input,start, pivotmarker-1);
+        if(end> (pivotmarker+1)) retCount+=qSortFirst(input,pivotmarker+1,end);
 
-    return 0;
+    return retCount;
     }
 
 
@@ -41,7 +42,7 @@ public class QSort {
         Charset charset = Charset.forName("ISO-8859-1");
         List<String> result = Files.readAllLines(Paths.get(filename), charset);
         int[] inpl = result.stream().mapToInt(Integer::parseInt).toArray();
-        qs.qSortFirst(inpl,0,inpl.length-1);
+        int retval = qs.qSortFirst(inpl,0,inpl.length-1);
         Arrays.stream(inpl).asLongStream().forEach(System.out::println);
        // Arrays.sort(inpl);
        // Arrays.stream(inpl).asLongStream().forEach(System.out::println);

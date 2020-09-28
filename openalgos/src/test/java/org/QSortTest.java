@@ -28,9 +28,43 @@ public class QSortTest {
     public void testFirst(){
         QSort qs = new QSort();
         int orig[] = Arrays.copyOf(inpl,inpl.length);
-        int retval = qs.qSortFirst(inpl,0,inpl.length-1);
+        int retval = qs.qSortFirst(inpl,0,inpl.length-1,null);
         Arrays.sort(orig);
+        System.out.println("First >> "+retval);
         Assert.assertArrayEquals(orig, inpl);
+
+    }
+
+    @Test
+    public void testLast(){
+        QSort qs = new QSort();
+        int orig[] = Arrays.copyOf(inpl,inpl.length);
+        int retval = qs.qSortFirst(inpl,0,inpl.length-1,"End");
+        Arrays.sort(orig);
+        System.out.println("End >> "+retval);
+        Assert.assertArrayEquals(orig, inpl);
+
+    }
+    @Test
+    public void testMed(){
+        QSort qs = new QSort();
+        int orig[] = Arrays.copyOf(inpl,inpl.length);
+        int retval = qs.qSortFirst(inpl,0,inpl.length-1,"Med");
+        Arrays.sort(orig);
+        System.out.println("Med >> "+retval);
+        Assert.assertArrayEquals(orig, inpl);
+
+    }
+
+    @Test
+    public void dummytest(){
+        QSort qs = new QSort();
+        int inpl1[] =  {2, 20, 1, 15, 3, 11, 13, 6, 16, 10, 19, 5, 4, 9, 8, 14, 18, 17, 7, 12};
+        int orig[] =  {2, 20, 1, 15, 3, 11, 13, 6, 16, 10, 19, 5, 4, 9, 8, 14, 18, 17, 7, 12};
+        int retval = qs.qSortFirst(inpl1,0,inpl1.length-1,"Med");
+        Arrays.sort(orig);
+        System.out.println("Med >> "+retval);
+        Assert.assertArrayEquals(orig, inpl1);
 
     }
 
